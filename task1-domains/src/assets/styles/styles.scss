@@ -7,6 +7,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
+  font: 14px "PT Sans",Arial,Helvetica,sans-serif;
 }
 
 input,
@@ -46,19 +47,12 @@ button:focus {
   width: 100%;
   // overflow: hidden;
   height: 100%;
-
-  &:first-child {
-    background-color: #ccc;
-  }
-
-  &:last-child {
-    background-color: #ccc;
-  }
 }
 
 .page-section {
   border: 1px solid black;
   height: 100%;
+  overflow: hidden;
 
 
   .page-section__grid {
@@ -68,42 +62,69 @@ button:focus {
     grid-template-columns: repeat(12, minmax(60px, 80px));
     margin: 0 auto;
     padding: 30px 0;
-     width: 90%;
+    width: 90%;
     max-width: 1092px;
     min-width: 819px;
     height: 100%;
 
-  }
+    .middle-content,
+    .section-title,
+    .advantages,
+    .description-text,
+    .promo-block,
+    .footer-privacy {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
 
-  .middle-content {
-    grid-column: 1 / -1;
-    text-align: center;
+    .header-title {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+
+    .share-info {
+      grid-column: 5 / -5;
+      text-align: center;
+    }
+
+    .page-down {
+      background-image: url("/assets/img/down.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 27px;
+      height: 50px;
+      grid-column: 6 / -6;
+      justify-self: center;
+      align-self: end;
+    }
+
+    .footer-privacy {
+      justify-self: center;
+      align-self: end;
+
+      a {
+        color: #fff;
+      }
+    }
+
   }
 
   &:first-of-type {
     background-image: url("/assets/img/background1.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    color: #fff;
   }
 
   &:last-of-type {
-    background-color: #ccc;
+    background-image: url("/assets/img/background2.jpg");
+    color: #fff;
   }
-}
 
-.header-title {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-
-.share-info {
-  grid-column: 5 / -5;
-  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .promo-text {
-
   font-size: 80px;
 }
 
@@ -144,15 +165,50 @@ button:focus {
   }
 }
 
-.page-down {
-  background-image: url("/assets/img/down.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 27px;
-  height: 50px;
-  grid-column: 6 / -6;
-  justify-self: center;
-  align-self: end;
+.advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .advantages__item {
+    flex: 0 0 25%;
+  }
+
+  .advantages__item-title {
+    padding: 0 5px;
+  }
+}
+
+.advantages__item-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+
+  .advantage-business-card & {
+    background-image: url("/assets/img/features/businesscard.svg");
+  }
+  .advantage-dns & {
+    background-image: url("/assets/img/features/dns.svg");
+  }
+  .advantage-certificate & {
+    background-image: url("/assets/img/features/certificate.svg");
+  }
+  .advantage-autorenewal & {
+    background-image: url("/assets/img/features/autorenewal.svg");
+  }
+  .advantage-cloud & {
+    background-image: url("/assets/img/features/cloud.svg");
+  }
+  .advantage-freessl & {
+    background-image: url("/assets/img/features/freessl.svg");
+  }
+  .advantage-dnssec & {
+    background-image: url("/assets/img/features/dnssec.svg");
+  }
+  .advantage-redirect & {
+    background-image: url("/assets/img/features/redirect.svg");
+  }
 }
 
 .pagination {
