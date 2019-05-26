@@ -76,7 +76,6 @@ h2 {
     .middle-content,
     .section-title,
     .advantages,
-    .description-text,
     .promo-block,
     .footer-privacy {
       grid-column: 1 / -1;
@@ -283,6 +282,77 @@ h2 {
   }
   .advantage-redirect & {
     background-image: url("/assets/img/features/redirect.svg");
+  }
+}
+
+.description-text {
+  grid-column: 2 / -2;
+  text-align: center;
+
+  p {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: bold;
+  }
+}
+
+.promo-block {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #df4a5e;
+  padding: 20px 35px;
+  border-radius: 8px;
+
+  &__text {
+    font-size: 22px;
+    text-align: left;
+    align-content: center;
+    padding-right: 70px;
+    p {
+      margin: 0;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+
+  &__thousand {
+    font-size: 50px;
+    font-weight: bold;
+    border-left: 2px solid rgba(255,255,255, 0.2);
+    padding: 0  0 0 35px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin: 0;
+    }
+
+    img {
+      width: 28px;
+      height: 28px;
+      margin-left: 10px;
+    }
+
+    // &::after {
+    //   content: url("/assets/img/plus-normal.svg");
+    //   background-size: cover;
+    //   background-repeat: no-repeat;
+    //   width: 28px;
+    //   height: 28px;
+    // }
+  }
+}
+
+.footer-privacy {
+  margin-top: 50px;
+  p {
+    font-size: 14px;
+    opacity: 0.5;
+    margin: 0;
   }
 }
 
