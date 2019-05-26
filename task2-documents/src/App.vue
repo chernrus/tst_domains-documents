@@ -1,7 +1,5 @@
 <template>
   <div class="main">
-    <h1>{{ message }}</h1>
-    <input v-model="message">
     <AccVerification/>
   </div>
 </template>
@@ -13,11 +11,6 @@ export default {
   name: 'app',
   components: {
     AccVerification
-  },
-  data () {
-    return {
-      message: 'Hello Vue.js!'
-    }
   }
 }
 </script>

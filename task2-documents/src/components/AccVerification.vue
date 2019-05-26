@@ -6,10 +6,12 @@
     <div class="upload">
       <DocumentUpload
         name="file-photo"
-        text="Загрузить скан страницы с фотографией"/>
+        text="Загрузить скан страницы с фотографией"
+        successText="Страница с фотографией"/>
       <DocumentUpload
         name="file-registaration"
-        text="Страница с пропиской"/>
+        text="Страница с пропиской"
+        successText="Страница с пропиской"/>
     </div>
   </div>
 </template>
@@ -26,8 +28,16 @@ export default {
 </script>
 
 <style lang="scss">
-  .upload {
-    // display: flex;
-    // flex-direction: column;
+  .verification {
+    width: 60%;
+    margin: 0 auto;
+
+    .upload {
+      display: table;
+      width: 100%;
+
+      // display: flex;
+      // flex-direction: column;
+    }
   }
 </style>
